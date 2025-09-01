@@ -5,7 +5,7 @@ GREEN='\033[0;32m'
 NC='\033[0m'
 
 if [ ! -d "$(pwd)/toolchain" ]; then
-    echo -e "${RED}[+]gas download toolchain....${NC}"
+    echo -e "${GREEN}[+]gas download toolchain....${NC}"
     git clone --depth=1 https://gitlab.com/neel0210/toolchain.git
 else
     echo -e "${GREEN}[!]clang sudah ready...${NC}"
@@ -13,7 +13,7 @@ fi
 
 # clone AnyKernel3
 if [ ! -d "$(pwd)/AnyKernel3" ]; then
-    echo -e "${RED}[+]gas download anykernel3....${NC}"
+    echo -e "${GREEN}[+]gas download anykernel3....${NC}"
     git clone -b a22x https://github.com/makruf1954/AnyKernel3.git AnyKernel3
 else
     echo -e "${GREEN}[!]anykernel ready....${NC}"
