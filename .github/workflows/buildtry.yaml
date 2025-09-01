@@ -21,7 +21,7 @@ jobs:
 
       - name: Run buildtry.sh
         run: |
-          chmod +x build.sh
+          chmod +x buildtry.sh
           ./buildtry.sh
     
       - name: Upload in telegram
