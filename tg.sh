@@ -23,7 +23,6 @@ else
   KERNEL_VER="Unknown"
 fi
 
-# Caption
 CAPTION="*A22-$DATE*
 \`\`\`
 LocalVersion :
@@ -32,13 +31,11 @@ $KERNEL_VER
 *Flash via TWRP only*
 "
 
-# Upload ke Telegram
 curl -F document=@"$ZIP_NAME" \
      -F "chat_id=$CHAT_ID" \
      -F "caption=$CAPTION" \
      -F "parse_mode=Markdown" \
      https://api.telegram.org/bot$BOT_TOKEN/sendDocument
-# clean
 cd $ANYKERNEL
 rm -rf $ZIP_NAME
 cd $HOME
